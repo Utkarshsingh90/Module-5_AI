@@ -10,7 +10,9 @@ def generate_career_advice(student_profile, rag_context, api_key):
 
     try:
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel('gemini-pro')
+        # Use the latest stable model
+        model = genai.GenerativeModel('gemini-1.5-flash')
+        # model = genai.GenerativeModel('gemini-pro')
 
         # --- STEP 1: PARSE RAG DATA ---
         company_info = rag_context['company_info']
