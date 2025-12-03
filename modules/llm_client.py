@@ -45,7 +45,7 @@ def generate_career_advice(student_profile, rag_context, api_key):
         1. Acknowledge the student's recent event and emotion (validate them).
         2. Provide specific advice that connects their '{student_profile['technical_status']}' to the '{student_profile['target_company']}' requirements.
         3. Use the "Insider Secret" to give them an edge.
-        4. Keep it under 100 words.
+        4. Keep it under 200 words.
         5. DO NOT be generic. Be specific to the company data provided.
 
         OUTPUT:
