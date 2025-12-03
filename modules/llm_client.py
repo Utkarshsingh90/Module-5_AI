@@ -13,8 +13,6 @@ def generate_career_advice(student_profile, rag_context, api_key):
         # Use the latest stable model
         model = genai.GenerativeModel("gemini-2.5-pro")
 
-        # model = genai.GenerativeModel('gemini-pro')
-
         # --- STEP 1: PARSE RAG DATA ---
         company_info = rag_context['company_info']
         examples = rag_context['emotional_examples']
