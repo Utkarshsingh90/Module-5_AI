@@ -1,4 +1,40 @@
-[
+[ 
+  {
+    "id": "S101",
+    "name": "Sangam Kumar Mishra",
+    "target_company": "Rippling",
+    "emotional_state": "Confident",
+    "technical_status": "Strong in Competitive Programming",
+    "recent_event": "Reached Candidate Master on Codeforces",
+    "days_to_interview": 10
+  },
+  {
+    "id": "S102",
+    "name": "Devanshu Dangi",
+    "target_company": "Tower Research / HFT",
+    "emotional_state": "Confident",
+    "technical_status": "Strong in Advanced DP & Math",
+    "recent_event": "Solved all 4 problems in LeetCode Weekly Contest",
+    "days_to_interview": 5
+  },
+  {
+    "id": "S103",
+    "name": "Utkarsh Singh",
+    "target_company": "Amazon",
+    "emotional_state": "Anxious",
+    "technical_status": "Good in DSA and AI/ML",
+    "recent_event": "Has not participated in any coding contests yet",
+    "days_to_interview": 25
+  },
+  {
+    "id": "S104",
+    "name": "Rustam Kumar",
+    "target_company": "Microsoft",
+    "emotional_state": "Frustrated",
+    "technical_status": "Good in web development and DSA",
+    "recent_event": "Struggling to clear Interviews",
+    "days_to_interview": 15
+  },
   {
     "id": "S001",
     "name": "Rahul Sharma",
