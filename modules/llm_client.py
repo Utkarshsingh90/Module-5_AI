@@ -11,7 +11,7 @@ def generate_career_advice(student_profile, rag_context, api_key):
     try:
         genai.configure(api_key=api_key)
         # Use the latest stable model
-        model = genai.GenerativeModel("gemini-1.5-pro-latest")
+        model = genai.GenerativeModel("gemini-2.5-pro")
 
         # model = genai.GenerativeModel('gemini-pro')
 
