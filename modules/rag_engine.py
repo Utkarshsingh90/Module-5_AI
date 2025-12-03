@@ -4,7 +4,7 @@ import random
 
 def load_knowledge_base():
     """Loads the synthetic knowledge base from the JSON file."""
-    # Construct path relative to this file
+
     base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     file_path = os.path.join(base_path, 'data', 'knowledge_base.json')
     
@@ -23,7 +23,7 @@ def retrieve_context(target_company, emotional_state):
     kb = load_knowledge_base()
     
     # 1. Company Context Retrieval
-    # Default to 'Generic' if company not found
+    # Default to generic if company not found
     company_data = kb.get("company_protocols", {}).get(target_company, {
         "focus_areas": ["General Coding", "Soft Skills"],
         "secret_tip": "Focus on fundamentals and clarity.",
@@ -38,11 +38,11 @@ def retrieve_context(target_company, emotional_state):
         if s["emotion_label"].lower() in emotional_state.lower()
     ]
     
-    # If no exact match, pick random generic ones (Fallback)
+    # If no exact match pick random generic ones 
     if not relevant_scenarios:
         relevant_scenarios = random.sample(all_scenarios, min(3, len(all_scenarios)))
     else:
-        # Limit to top 3 relevant examples to save token space
+        # Limit to top 3 relevant examples 
         relevant_scenarios = relevant_scenarios[:3]
 
     return {
