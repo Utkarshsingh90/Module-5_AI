@@ -21,35 +21,57 @@
       "hiring_bar": "Reliability and willingness to learn new technologies."
     }
   },
+ 
   "interview_topics": {
     "Resume": "Resume Tip: Do not list skills you cannot justify. Use the 'X-Y-Z' formula: 'Accomplished [X] as measured by [Y], by doing [Z]'. Example: 'Reduced API latency by 20% by implementing Redis caching'.",
-    "System_Design": "Start broad (High Level Design) then go deep. Always discuss Trade-offs (e.g., consistency vs availability).",
-    "HR_Round": "Be honest but positive. Never say 'I have no weaknesses'. Say 'I struggle with X, but I am fixing it by doing Y'."
+    "System_Design": "Start broad (High Level Design) then go deep. Always discuss Trade-offs (e.g., consistency vs availability). Never jump straight to specific tools like 'Kafka' without justifying the need for a message queue.",
+    "HR_Round": "Be honest but positive. Never say 'I have no weaknesses'. Say 'I struggle with X, but I am fixing it by doing Y'. Always research the company's recent news before the call.",
+    "DSA_Approach": "Don't code immediately. 1. Clarify constraints (input size, range). 2. Discuss Brute Force. 3. Optimize approach. 4. Dry run with a sample case. 5. Only then, write code.",
+    "Code_Quality": "Write production-ready code. Use meaningful variable names (`userIndex` instead of `i`). Modularize logic into helper functions. Handle edge cases (null, empty inputs) explicitly.",
+    "Introduction": "Keep 'Tell me about yourself' to 90 seconds. Structure: Current Status -> Past relevant experience/projects -> Why you want this role. Don't recite your bio-data.",
+    "Stuck_In_Interview": "Silence is the enemy. If you are stuck, think out loud. Say, 'I am thinking of using a Hashmap to store counts, but I am worried about space complexity.' The interviewer is there to help, give them a chance.",
+    "Questions_For_Interviewer": "Never say 'No questions'. Ask intelligent questions: 'What is the biggest technical challenge the team is facing?' or 'How does the team handle code reviews?'.",
+    "Time_Complexity": "Always proactively state Time and Space complexity after solving. Don't wait to be asked. If you used O(N) space, justify why it was necessary.",
+    "Project_Explanation": "Use the STAR method (Situation, Task, Action, Result). Focus 70% of the time on the 'Action' (what YOU did, not what the 'team' did) and the 'Result' (impact).",
+    "Debugging": "If your code fails a test case, don't guess. Dry run the specific failing input line-by-line on paper/whiteboard. Show a systematic debugging mindset.",
+    "Behavioral_Conflict": "When asked about conflict, never blame teammates. Focus on the solution. 'We had a disagreement on API design. I listened to his point, presented data on latency, and we reached a middle ground.'",
+    "Object_Oriented_Design": "Adhere to SOLID principles. Specifically, ensure classes have a Single Responsibility. Don't create a 'God Class' that handles DB, UI, and Logic all at once.",
+    "Database_Choice": "Don't say 'I used MongoDB because it's easy'. Say 'I chose NoSQL because the data schema was evolving and read-heavy'. Justify technical choices with requirements.",
+    "Operating_Systems": "Understand the difference between a Process and a Thread. Be ready to explain Concurrency, Deadlocks, and Race Conditions with real-life examples (e.g., banking transactions).",
+    "Networking_Basics": "Know what happens when you type a URL in a browser: DNS resolution -> TCP Handshake -> HTTP Request -> Server Processing -> Response.",
+    "Virtual_Interview_Etiquette": "Look at the camera lens, not the screen, to simulate eye contact. Ensure your background is clean. Have a pen and paper ready for dry runs.",
+    "Gap_Year_Justification": "Own your gap. 'I took a year to prepare for GATE/UPSC. While it didn't work out, it taught me discipline and I kept my coding skills sharp by building X project.'",
+    "Negotiation": "If you have an offer, don't accept immediately. Express gratitude and excitement, but ask for time to review the details. If you have competing offers, mention them politely to increase leverage.",
+    "System_Design_Scalability": "When asked to scale, think in layers: 1. Load Balancer. 2. Caching (Redis). 3. Database Sharding/Replication. 4. Asynchronous Processing (Queues).",
+    "Mock_Interview_Analysis": "Record your mocks. Watch them to catch filler words ('um', 'like', 'actually') and body language issues (slouching, not smiling).",
+    "Handling_Unknown_Questions": "If you don't know an answer (e.g., 'What is CAP theorem?'), don't bluff. Say, 'I haven't worked with that concept directly, but based on what I know about distributed systems, I assume...'",
+    "Post_Interview": "Send a personalized 'Thank You' email within 24 hours. Mention a specific topic you enjoyed discussing. It leaves a lasting positive impression."
   },
   "emotional_scenarios": [
     {
-      "user_text": "I feel empty lately. Nothing excites me anymore.",
-      "emotion_label": "sad",
-      "risk_level": "medium",
-      "sample_reply": "I'm sorry you're feeling this way. Try reconnecting with small activities you once enjoyed. Progress can start with tiny steps."
+      "user_text": "I don't know what career path fits me. I'm scared to choose wrong.",
+      "emotion_label": "confused",
+      "risk_level": "low",
+      "sample_reply": "Uncertainty is normal. Try exploring small projects in different fields to discover what energizes you."
     },
+   
     {
       "user_text": "I'm worried I will fail my upcoming internship interview.",
       "emotion_label": "anxious",
       "risk_level": "low",
-      "sample_reply": "It's normal to feel anxious. Focus on practicing common questions and revising your projects. You’re more prepared than you think."
+      "sample_reply": "It's normal to feel anxious. Focus on practicing common questions and revising your projects. You're more prepared than you think."
+    },
+     {
+      "user_text": "I'm preparing for GATE but I feel like I'm not smart enough.",
+      "emotion_label": "anxious",
+      "risk_level": "low",
+      "sample_reply": "Your effort matters more than perfection. Stick to a small and consistent routine—progress will follow."
     },
     {
       "user_text": "I keep snapping at everyone for no reason.",
       "emotion_label": "angry",
       "risk_level": "low",
       "sample_reply": "It sounds like stress may be building up. A short break or grounding activity can help you reset."
-    },
-    {
-      "user_text": "I don’t know what career path fits me. I'm scared to choose wrong.",
-      "emotion_label": "confused",
-      "risk_level": "low",
-      "sample_reply": "Uncertainty is normal. Try exploring small projects in different fields to discover what energizes you."
     },
     {
       "user_text": "Everything is piling up and I can’t keep up anymore.",
@@ -63,17 +85,18 @@
       "risk_level": "critical",
       "sample_reply": "You deserve support and care. Reaching out to someone you trust or a professional can make a real difference."
     },
-    {
-      "user_text": "I’m preparing for GATE but I feel like I’m not smart enough.",
-      "emotion_label": "anxious",
-      "risk_level": "low",
-      "sample_reply": "Your effort matters more than perfection. Stick to a small and consistent routine—progress will follow."
-    },
+   
     {
       "user_text": "I tried so hard but nothing works. What's the point?",
       "emotion_label": "sad",
       "risk_level": "critical",
       "sample_reply": "I’m really sorry you're feeling this exhausted. Please consider talking to a trusted friend or professional—support can help lighten this weight."
+    },
+     {
+      "user_text": "I feel empty lately. Nothing excites me anymore.",
+      "emotion_label": "sad",
+      "risk_level": "medium",
+      "sample_reply": "I'm sorry you're feeling this way. Try reconnecting with small activities you once enjoyed. Progress can start with tiny steps."
     },
     {
       "user_text": "I am angry because my teammates don’t take responsibility.",
