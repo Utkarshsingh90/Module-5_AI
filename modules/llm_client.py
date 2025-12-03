@@ -10,10 +10,9 @@ def generate_career_advice(student_profile, rag_context, api_key):
 
     try:
         genai.configure(api_key=api_key)
-        # Use the latest stable model
         model = genai.GenerativeModel("gemini-2.5-pro")
 
-        # --- STEP 1: PARSE RAG DATA ---
+        # --- PARSE RAG DATA ---
         company_info = rag_context['company_info']
         examples = rag_context['emotional_examples']
         
@@ -21,7 +20,7 @@ def generate_career_advice(student_profile, rag_context, api_key):
         for ex in examples:
             examples_text += f"- User: \"{ex['user_text']}\" -> AI: \"{ex['sample_reply']}\"\n"
 
-        # --- STEP 2: PROMPT ENGINEERING (The "Secret Sauce") ---
+        # ---  PROMPT ENGINEERING  ---
         prompt = f"""
         ROLE:
         You are an elite AI Career Coach for engineering students. Your goal is to provide specific, high-value advice.
